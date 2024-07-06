@@ -653,7 +653,7 @@ namespace video {
       std::nullopt,  // QP rate control fallback
       "h264_qsv"s,
     },
-    PARALLEL_ENCODING | CBR_WITH_VBR | RELAXED_COMPLIANCE | NO_RC_BUF_LIMIT
+    PARALLEL_ENCODING | CBR_WITH_VBR | RELAXED_COMPLIANCE 
   };
 
   encoder_t amdvce {
@@ -859,7 +859,7 @@ namespace video {
       std::make_optional<encoder_t::option_t>("qp"s, &config::video.qp),
       "h264_vaapi"s,
     },
-    LIMITED_GOP_SIZE | PARALLEL_ENCODING | SINGLE_SLICE_ONLY | NO_RC_BUF_LIMIT
+    LIMITED_GOP_SIZE | PARALLEL_ENCODING | SINGLE_SLICE_ONLY 
   };
 #endif
 
